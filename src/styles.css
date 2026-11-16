@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-ink: #07090c;
+  --color-ink-2: #0f1b2d;
+  --color-paper: #f8f6f1;
+  --color-paper-2: #eef0f2;
+  --color-gold: #b8892f;
+  --color-gold-deep: #8a6420;
+  --color-amber: #ffbd61;
+  --color-muted: #a3acb8;
+  --color-quiet: #8b95a3;
+  --color-line: #2a323d;
+  --color-slate: #475569;
+
+  --radius-sm: 2px;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-ink);
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 3px;
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.field-scrim {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-ink) 72%, transparent) 0%,
+      transparent 16%,
+      transparent 70%,
+      color-mix(in srgb, var(--color-ink) 88%, transparent) 100%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-ink) 86%, transparent) 0%,
+      color-mix(in srgb, var(--color-ink) 55%, transparent) 42%,
+      color-mix(in srgb, var(--color-ink) 12%, transparent) 100%
+    );
+}
+
+.grain {
+  background-image: radial-gradient(rgba(238, 240, 242, 0.045) 0.6px, transparent 0.6px);
+  background-size: 3px 3px;
+  opacity: 0.55;
+}
+
+@media (max-width: 720px) {
+  .field-scrim {
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-ink) 86%, transparent),
+      color-mix(in srgb, var(--color-ink) 62%, transparent) 42%,
+      color-mix(in srgb, var(--color-ink) 92%, transparent)
+    );
+  }
+}

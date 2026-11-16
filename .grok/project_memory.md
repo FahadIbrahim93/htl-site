@@ -1,0 +1,6 @@
+- Project: Hope Theory Labs website (FahadIbrahim93/hopetheorylabs-site) — one-page marketing site, WhatsApp conversion, Next.js static export on Vercel [2026-10-31]
+- Live: https://hopetheorylabs.vercel.app; owner Fahad Ibrahim (Hope Theory, Dhaka) [2026-10-31]
+- PR #37 merged; #36 closed; assistant on main [2026-10-31]
+- fix/production-harden: remove node:crypto from server.ts; chat/lead never-throw + FAQ fallback; hero/SEO sell websites from ৳10k first [2026-10-31]
+- Live /api/chat was 500 FUNCTION_INVOCATION_FAILED; merge harden branch then re-curl [2026-10-31]
+- Canonical docs: docs/SPEC.md (wins), BRAND.md, DESIGN_RULES.md, QA.md, AGENTS.md [2026-10-31]
